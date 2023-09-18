@@ -1,7 +1,9 @@
 package com.example.organizationapp;
 
 import com.example.organizationapp.model.FileModel;
+import javafx.application.Platform;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
@@ -121,5 +123,25 @@ public class AppController {
                 fileTableView.getItems().addAll(fileModels);
             }
         }
+    }
+
+    @FXML
+    private void onCloseButtonClicked() {
+        // Close the application
+        Platform.exit();
+    }
+
+    @FXML
+    private void onShowInfoDialog() {
+        // Create an Alert dialog
+        Alert infoAlert = new Alert(Alert.AlertType.INFORMATION);
+
+        // Set the title and content text
+        infoAlert.setTitle("Information");
+        infoAlert.setHeaderText("Organization App");
+        infoAlert.setContentText("The Organization App is a JavaFX application designed to help you organize files within a selected directory. It allows you to choose a directory, view the files in that directory, and then organize them into subfolders based on their file types.");
+
+        // Show the dialog
+        infoAlert.showAndWait();
     }
 }

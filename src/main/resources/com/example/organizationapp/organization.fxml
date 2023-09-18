@@ -17,10 +17,10 @@
 <VBox prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.organizationapp.AppController">
   <MenuBar VBox.vgrow="NEVER">
     <Menu mnemonicParsing="false" text="File">
-      <MenuItem mnemonicParsing="false" text="Quit" />
+      <MenuItem mnemonicParsing="false" onAction="#onCloseButtonClicked" text="Quit" />
     </Menu>
     <Menu mnemonicParsing="false" text="Help">
-      <MenuItem mnemonicParsing="false" text="About MyApp" />
+      <MenuItem mnemonicParsing="false" onAction="#onShowInfoDialog" text="About MyApp" />
     </Menu>
   </MenuBar>
     <Pane prefHeight="395.0" prefWidth="640.0">
